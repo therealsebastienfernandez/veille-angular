@@ -1,6 +1,10 @@
-<button (click)="count()">
+<main>
+  <h1>{{"Hello, " + title()}}</h1>
+  <button (click)="count()">
   Score : {{ score() }}
-</button>
-<button (click)="increment()">
+  </button>
+  <button (click)="increment()">
   Points: {{points}}
-</button>
+  </button>
+</main>
+

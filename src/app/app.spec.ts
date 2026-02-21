@@ -20,4 +20,13 @@ describe('App', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, demo-evolucare');
   });
+  it('should increment on th click', () => {
+    const fixture = TestBed.createComponent(App);
+    const app = fixture.componentInstance;
+    fixture.detectChanges();
+    expect(app.score()).toBe(0);
+    app.count()
+    expect(app.score()).toBe(1);
+
+  })
 });
